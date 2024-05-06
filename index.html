@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khanaBar</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+
+        
+</head>
+
+<body>
+    <header>
+        <div class="side-navbar">
+            <i class="fa fa-bars">
+
+            </i>
+            <div class="design">
+                <a href="">meterial</a>
+                <a href="">design</a>
+                <a href="">process</a>
+
+            </div>
+        </div>
+
+        <div class="top-navbar">
+            <div class="top">
+                <a href="">Shop</a>
+                <a href="">Features</a>
+                <a href="">Recipes</a>
+                <a href="">Hotline</a>
+            </div>
+
+            <div class="icons">
+                <a href=""><i class="fa fa-cart-plus"></i></a>
+                <img src="logo.jpg" alt="">
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-switch" class="theme-switch-checkbox">
+
+                    <label for="theme-switch" class="theme-switch-label">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="food">
+            <div class="foodbar">
+                <span>KhanaBar</span>
+                <img src="img2.png" alt="" id="foodbar-img">
+            </div>
+            <div class="order">
+                <h1>healthy salad</h1>
+                <p>salad is nutritionally complete food that contain all 24 seesntial vitamins essential fatty acides,
+                    carbs, fibre and phytonutrients.</p>
+                    <span class="anker">₹126</span>
+                    <span class="sp">Discount 50%</span>
+                    <a href="" class="btn">Order now</a>
+            </div>
+        </div>
+
+
+            <div class="footer">
+
+                <div class="images">
+                    <img src="img1.png" alt="Asparagus wild salad" class="item-img">
+                    <span>₹120</span>
+                    <p>Asparagus wild salad</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                </div>
+
+
+
+                <div class="images">
+                    <img src="img3.png" alt="Asparagus wild salad" class="item-img">
+                    <span>₹130</span>
+                    <p>Asparagus wild salad</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                </div>
+
+
+
+
+
+                <div class="images">
+                    <img src="img4.png" alt="Asparagus wild salad" class="item-img">
+                    <span>₹120</span>
+                    <p>Asparagus wild salad</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                </div>
+
+
+
+
+                <div class="images">
+                    <img src="img5.png" alt="Asparagus wild salad" class="item-img">
+                    <span>₹143</span>
+                    <p>Asparagus wild salad</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#"><i class="fas fa-cart-plus"></i></a>
+
+                </div>
+               
+                 </div>
+
+
+
+                 <div class="social">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-google"></i></a>
+                 </div>
+
+    </header>
+
+    <script>
+
+
+        const addToCartButtons = document.querySelectorAll('.images a');
+
+        const cartIcon = document.querySelector('.top-navbar .icons a i');
+        let cartCount = 0;
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                cartIcon.innerText = cartCount;
+            });
+        });
+
+
+
+
+        const footerImages = document.querySelectorAll('.footer .images img');
+        const foodbarImage = document.getElementById('foodbar-img');
+
+        footerImages.forEach(img => {
+            img.addEventListener('mouseover', () => {
+                foodbarImage.src = img.src;
+            });
+        });
+
+
+        const itemImages = document.querySelectorAll('.item-img');
+        itemImages.forEach(img =>{
+            img.addEventListener('mouseover', () => {
+                itemImages.forEach(img => img.classList.remove('animated'));
+
+                img.classList.add('animated');
+            });
+        });
+
+
+
+
+
+        const themeSwitch = document.getElementById('theme-switch');
+        const body = document.body;
+
+        themeSwitch.addEventListener('change', function () {
+            body.classList.toggle('dark-mode');
+        })
+    </script>
+
+
+
+</body>
+
+</html>
